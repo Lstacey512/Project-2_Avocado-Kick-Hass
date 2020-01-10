@@ -1,0 +1,72 @@
+.navbar .nav-link {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.navbar .navbar-item.active {
+    border-left: #444 3px solid;
+}
+
+.carousel-item {
+    height: 450px;
+}
+
+.carousel-image-1 {
+    background: url('../images/avocado.jpg');
+    background-size: cover;
+}
+
+.carousel-image-2 {
+    background: url('../images/avomoney.jpg');
+    background-size: cover;
+}
+
+.carousel-image-3 {
+    background: url('../images/avomap.png');
+    background-size: cover;
+}
+
+#section2 {
+    position: relative;
+    min-height: 200px;
+    background: url('/static/images/money.jpeg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+#authors .img {
+      
+    margin-top: -50px;
+    
+}
+/* #authors .card:hover {
+      background: rgb(70, 224, 70);
+      color: #fff;
+    } */
+  
+#refCollapse .card-body {
+    text-align: left;
+}
+
+#map {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    /* border: 1px solid black;
+    border-radius: 8px; */
+    height: 750px;
+    /* width: 100%;  */
+}
