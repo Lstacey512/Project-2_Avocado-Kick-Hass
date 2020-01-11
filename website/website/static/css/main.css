@@ -1,0 +1,64 @@
+.border{
+    border: black 1px;
+}
+/*------ALL BACKGROUND COLORS ------*/
+.gold{
+    background-color: rgb(255,208,37);
+}
+
+.light-cream{
+    background-color:rgb(251,251,239);
+}
+
+.light-green{
+    background-color: rgb(214,211,91);
+}
+
+.dark-green{
+    background-color: rgb(86,117,45);
+}
+
+/*------OTHER STYLING-------------------*/
+.header-icon{
+    width: 150px;
+    height:auto;
+    padding-left:30px;
+}
+
+.navigation-text{
+    font-weight: bold;
+    color:white;
+    font-family: 'Questrial', sans-serif;
+    font-size: 14px;
+}
+
+.navigation-text:hover{
+    color:whitesmoke;
+}
+
+h6{
+    color:white;
+    font-family: 'Krona One', sans-serif;
+    font-weight:bold;
+    font-size: 20px;
+    padding-top:10px;
+}
+
+.section-header{
+    text-align:center;
+    height:3em;
+}
+
+.section-text-light{
+    color:white;
+    font-family: 'Questrial', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 20px 20px 20px 20px;
+    text-align: justify;
+}
+
+.chart-placeholder{
+    width:100px;
+    height:100px;
+}
