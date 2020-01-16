@@ -12,17 +12,111 @@
 
 .light-green{
     background-color: rgb(214,211,91);
+    min-height: 100px;
+    padding-bottom: 20px;
 }
 
 .dark-green{
     background-color: rgb(86,117,45);
 }
 
+.tan{
+    background-color: rgb(255,230,153);
+    min-height: 100px;
+    padding-bottom: 20px;
+}
+
+.light{
+    background-color: rgb(255,241,199);
+    border: solid #ffffff 1px;
+}
+
+.dark{
+    background-color: rgb(232, 231, 165);
+    border: solid rgb(240, 239, 165) 1px;
+}
+
+.button-dark{
+    background-color: rgb(243,242,205);
+}
+
+.button-light{
+    background-color: rgb(255,247,224);
+}
+
 /*------OTHER STYLING-------------------*/
+
+.button-holder{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.central-text{
+    padding: 20px 50px 10px 50px;
+    }
+
+.chart{
+    margin: 20px 50px 20px 50px;
+    height: 300px;
+    background-color: cadetblue;
+}
+
+.chart-holder{
+    display:flex;
+    flex-direction: column;
+}
+
+.controler-button{
+    font-size: 12px;
+    font-family: Arial;
+    margin: 5px 5px 5px 5px;
+    padding: 0px 20px 0px 20px;
+    border:0px;
+    border-radius: 5px;
+    box-shadow: none;
+    width: 150px;
+}
+
+.controler-button:hover{
+    background-color: rgb(255, 254, 238);
+}
+
+.controler-button:active{
+    background-color: rgb(146, 146, 146);
+    opacity:.75;
+}
+
+.controler-label{
+    font-size: 12px;
+    font-family: Arial;
+    margin: 5px 5px 5px 5px;
+    width: 100px;
+    color:black;
+}
+
+h6{
+    color:white;
+    font-family: 'Krona One', sans-serif;
+    font-weight:bold;
+    font-size: 18px;
+    padding-top:15px;
+}
+
 .header-icon{
     width: 150px;
     height:auto;
     padding-left:30px;
+}
+
+.horizontal-controler{
+    display: flex;
+    margin: 5px 20px 5px 20px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 600px; 
+    width:fit-content; 
 }
 
 .navigation-text{
@@ -36,14 +130,6 @@
     color:whitesmoke;
 }
 
-h6{
-    color:white;
-    font-family: 'Krona One', sans-serif;
-    font-weight:bold;
-    font-size: 20px;
-    padding-top:10px;
-}
-
 .section-header{
     text-align:center;
     height:3em;
@@ -54,11 +140,41 @@ h6{
     font-family: 'Questrial', sans-serif;
     font-size: 14px;
     font-weight: bold;
-    padding: 20px 20px 20px 20px;
     text-align: justify;
 }
 
-.chart-placeholder{
-    width:100px;
-    height:100px;
+.section-text-dark{
+    color:gray;
+    font-family: 'Questrial', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.side-text-left{
+    padding: 20px 15px 20px 50px;
+}
+
+.side-text-right{
+    padding: 20px 50px 20px 15px;
+}
+
+.vertical-controler{
+    display: flex;
+    flex-direction: column;
+    border: solid rgb(240, 239, 165) 1px;
+    border-radius: 5px;
+    background-color: rgb(232, 231, 165);
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: 150px;
+    max-width: 180px;
+}
+
+/*Media adjustments*/
+@media only screen and (max-width: 600px) {
+    .axis-controler {
+        margin: 5px 50px 5px 50px;
+    }
 }
