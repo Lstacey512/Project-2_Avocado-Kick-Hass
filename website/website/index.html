@@ -11,43 +11,47 @@
         integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
         integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Krona+One|Questrial&display=swap" rel="stylesheet">
 
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
         integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
         crossorigin="" />
 
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
     <title>Avocad-Know</title>
 </head>
 
+<!--BODY-->
 <body id="home" data-spy="scroll" data-target="#main-nav">
-    <nav class="navbar navbar-expand-sm navbar-dark bg-success fixed-top" id="main-nav">
-        <div class="container">
-            <a href="index.html" class="navbar-brand">Avocad-Know</a>
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-sm gold" id="main-nav">
+            <a class="navbar-brand" href="index.html">
+                <img src="../../Resources/Creative/Assets/NavBarLogo.png" class="header-icon">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
+          
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="index.html" class="nav-link navigation-text">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#section1" class="nav-link">Avocado</a>
+                        <a href="#section1" class="nav-link navigation-text">Avocado</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#section2" class="nav-link">Price</a>
+                        <a href="#section2" class="nav-link navigation-text">Price</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#section3" class="nav-link">Map</a>
+                        <a href="#section3" class="nav-link navigation-text">Map</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#authors" class="nav-link">About Us</a>
+                        <a href="#authors" class="nav-link navigation-text">About Us</a>
                     </li>
                 </ul>
             </div>
-        </div>
     </nav>
 
     <!-- SHOWCASE SLIDER -->
@@ -98,76 +102,219 @@
         </div>
     </section>
 
-    <!--  SECTION 1 -->
-    <section id="section1" class="py-5">
-        <div class="container">
+<!--  SECTION 1 -->
+    <section id="section1" class="py-0">
+        <div class="container-fluid">
+            <!--Volume Header 1-->
             <div class="row">
-                <div class="col">
-                    <h1 class="d-flex justify-content-center text-center mb-3">Avocado</h1>
+                <div class="col-12 dark-green section-header">
+                    <h6>VOLUME TRENDS  |  AVOCADO-POCALYPSE</h6>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4 mb-4 text-center">
-                    <i class="fas fa-leaf fa-3X mb-2"></i>
-                    <h3>Data</h3>
-                    <p>Data data data</p>
+            <!--Volumes Section 1-->
+            <div class="row light-green">
+                <div class="col-7">
+                    <div class="chart-holder align-items-center">
+                        <div class="chart" id="Volume-over-time" style="min-width:800px;">
+                            <!--VOLUMES OVER TIME PLOTLY GOES HERE!! You may need to remove background-color from chart class (css main)-->
+                        </div>
+                        <div class = "horizontal-controler dark">
+                            <p class="controler-label">Display </br> Data By</p>
+                            <div class="button-holder">
+                                <button class="controler-button button-dark">Overall </button>
+                                <button class="controler-button button-dark">Type/Size </button>
+                                <button class="controler-button button-dark">Traditional/Organic </button>
+                            </div>
+                        </div>
+                        <div class="horizontal-controler dark">
+                            <p class="controler-label">Timeframe </br> (xaxis)</p>
+                            <div class="button-holder">
+                                <button class="controler-button button-dark">Year </button>
+                                <button class="controler-button button-dark">Quarter/Year </button>
+                                <button class="controler-button button-dark">Month </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4 mb-4 text-center">
-                    <i class="fas fa-leaf fa-3X mb-2"></i>
-                    <h3>Data</h3>
-                    <p>Data data data</p>
+                <div class="col-5 section-text-light">
+                    <p class="side-text-right"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing enim eu turpis egestas pretium. Tempor nec feugiat nisl pretium fusce id. In fermentum et sollicitudin ac orci phasellus egestas. Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Suspendisse in est ante in. Sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. Tempus egestas sed risus. Quis lectus nulla at volutpat diam ut venenatis. Selerisque eleifend donec pretium vulputate sapien nec. Massa eget egestas purus et esc viverra accumsan. Sit amet dictum sit amet.
+                        Lacus luctus sit accumsan tortor posuere ac ut. 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </br>
+                    </br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        ed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. Tempus egestas sed risus.
+                    </p>
                 </div>
-                <div class="col-md-4 mb-4 text-center">
-                    <i class="fas fa-leaf fa-3X mb-2"></i>
-                    <h3>Data</h3>
-                    <p>Data data data</p>
+            </div>
+
+            <!--Volumes Section 2-->
+            <div class="row light-cream">
+                <div class="col-12 section-text-dark">
+                    <p class="central-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Adipiscing enim eu turpis egestas pretium. Tempor nec feugiat nisl pretium fusce id. In fermentum et sollicitudin ac orci phasellus egestas. 
+                        Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Adipiscing enim eu turpis egestas pretium. Tempor nec feugiat nisl pretium fusce id. In fermentum et sollicitudin ac orci phasellus egestas. 
+                        Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="row light-cream justify-content-center">
+                <div class="col-10 justify-content-center">
+                    <h3 class="section-text-dark" style="font-size: 16px; text-align: center;"> Volume Sales as Type/Production Share</h3>
+                </div>
+            </div>
+
+            <div class="row light-cream justify-content-center" style="padding: 20px 0px 20px 0px;">
+                <div class="col-2" id="pie-2015">
+                    <div style="display:block; height:200px; width:200px; background-color:cadetblue;"></div>
+                </div>
+                <div class="col-2" id="pie-2016">
+                    <div style="display:block; height:200px; width:200px; background-color:cadetblue;"></div>
+                </div>
+                <div class="col-2" id="pie-2017">
+                    <div style="display:block; height:200px; width:200px; background-color:cadetblue;"></div>
+                </div>    
+                <div class="col-2" id="pie-2018">
+                    <div style="display:block; height:200px; width:200px; background-color:cadetblue;"></div>
+                </div> 
+                <div class="col-2 border vertical-controler" id="pie-button-control">
+                    <p class="controler-label" style="padding: 2px 0px 5px 0px;">Display Data by</p>
+                    <button class="controler-button button-dark" style="height:35px;">Type/Size </button>
+                    <button class="controler-button button-dark" style="height:35px;">Traditional/Organic </button>
                 </div>
             </div>
         </div>
     </section>
 
     <!--  SECTION 2 -->
-    <section id="section2" class="py-5">
-        <div class="dark-overlay">
+    <section id="section2" class="py">
+        <div class="container-fluid">
+            <!--Section 2 Header-->
             <div class="row">
-                <div class="col">
-                    <div class="container pt-5">
-                        <h1>How Much For THAT Avocado?</h1>
-                        <p class="d-none d-md-block">
-                            Nope, Nada, No way, Wellll, NO
+                <div class="col-12 dark-green section-header">
+                    <h6>PRICING TRENDS  |  COLD, HARD HA$$</h6>
+                </div>
+            </div>
+            <!--Section 2 Pricing Trends-->
+            <div class="row tan">
+                <div class="col-5">
+                    <div class="chart-holder align-items-center">
+                        <img src="/Resources/Creative/Assets/LargeAvocado.png" width:400px>
+
+                        <p class="side-text-left section-text-dark">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing enim eu turpis egestas pretium. Tempor nec feugiat nisl pretium fusce id. In fermentum et sollicitudin ac orci phasellus egestas. Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Suspendisse in est ante in. Sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. Tempus egestas sed risus. Quis lectus nulla at volutpat diam ut venenatis. Selerisque eleifend donec pretium vulputate sapien nec. Massa eget egestas purus et esc viverra accumsan. Sit amet dictum sit amet.
+                        Lacus luctus sit accumsan tortor posuere ac ut. 
+                        </br>
+                        </br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing enim eu turpis egestas pretium.
                         </p>
+
                     </div>
+                </div>
+                <div class="col-7 chart-holder align-items-center">
+                    <div class="chart" id="Pricing-over-time" style="min-width: 800px;">
+                        <!--Pricing over time Chart goes here-->
+                    </div>
+                    <div class = "horizontal-controler light">
+                        <p class="controler-label">Display </br> Data By</p>
+                        <div class="button-holder">
+                            <button class="controler-button button-light">Overall </button>
+                            <button class="controler-button button-light">Type/Size </button>
+                            <button class="controler-button button-light">Traditional/Organic </button>
+                        </div>
+                    </div>
+                    <div class="horizontal-controler light">
+                        <p class="controler-label">Timeframe </br> (xaxis)</p>
+                        <div class="button-holder">
+                            <button class="controler-button button-light">Year </button>
+                            <button class="controler-button button-light">Quarter/Year </button>
+                            <button class="controler-button button-light">Month </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Section 2 Pricinv by Volume-->
+            <div class="row light-green">
+                <div class="col-12 section-text-light">
+                    <p class="central-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Adipiscing enim eu turpis egestas pretium. Tempor nec feugiat nisl pretium fusce id. In fermentum et sollicitudin ac orci phasellus egestas. 
+                        Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Adipiscing enim eu turpis egestas pretium. Tempor nec feugiat nisl pretium fusce id. In fermentum et sollicitudin ac orci phasellus egestas. 
+                        Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. 
+                    </p>
+                </div>
+
+                <div class="col-12 chart-holder align-items-center">
+                    <div class="chart" id="Pricing-by-volume" style="min-width: 1200px;">
+            
+                <!--Pricing by Volume-->
+                    </div>
+                    
+                    <div class = "horizontal-controler dark">
+                        <p class="controler-label">Display </br> Data By</p>
+                        <div class="button-holder">
+                            <button class="controler-button button-dark"> Overall </button>
+                            <button class="controler-button button-dark"> Small</button>
+                            <button class="controler-button button-dark"> Large </button>
+                            <button class="controler-button button-dark"> Extra Large</button>
+                            <button class="controler-button button-dark"> Conventional </button>
+                            <button class="controler-button button-dark"> Organic </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12" id="Weather-events">
+                    <!--Weather map here-->
                 </div>
             </div>
         </div>
     </section>
 
     <!--  SECTION 3 -->
-    <section id="section3" class="py-5">
-        <div class="container">
+    <section id="section3" class="py">
+        <div class="container-fluid">
+            <!--Section 3 Header-->
             <div class="row">
-                <div class="col">
-                    <h3 class="text-black text-center pb-3">US Weather events</h3>
+                <div class="col-12 dark-green section-header">
+                    <h6>MARKET TRENDS  |  WHAT THE GUAC?</h6>
+                </div>
+            </div>
 
-                    <!-- The div that holds our map -->
-                    <div id="map"></div>
+            <!--Section 3 Market Tables -->
+            <div class="row light-green">
+                <div class="col-12">
+                    <p>This is where some write-up will go<p>
+                <div>
 
+            <div class="row">
+                <div class="col-5">
+                    <p>VOLUMES TABLE</p>
+                </div>
+                <div class="col-5">
+                    <p>PRICE TABLE<p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12" id="markets-map">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT US -->
+    <!-- SECTION 4 -->
     <section id="authors" class="my-5 text-center">
-        <div class="container">
+        <div class="container-fluid">
+            <!--About header-->
             <div class="row">
-                <div class="col">
-                    <div class="info-header mb-5">
-                        <h1 class="text-success pb-3">
-                            About Us
-                        </h1>
-                        <!-- <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt sed officiis voluptatibus, abeveniet cumque?</p> -->
-                    </div>
+                <div class="col-12 dark-green section-header">
+                    <h6>ABOUT</h6>
                 </div>
             </div>
 
