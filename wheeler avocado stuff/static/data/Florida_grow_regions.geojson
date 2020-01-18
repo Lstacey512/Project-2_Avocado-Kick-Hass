@@ -1,0 +1,7 @@
+{"type":"FeatureCollection","features":
+[{"type":"Feature","properties":
+{"OBJECTID":1,"DEPCODE":21,"COUNTY":"041","COUNTYNAME":
+"GILCHRIST","DATESTAMP":"2000-05-16T00:00:00.000Z",
+"ShapeSTArea":9908353355.450989,"ShapeSTLength":487300.01135911344},
+"geometry":{"type":"Polygon","coordinates":
+[[[27.386922, -82.559540],[27.384483, -82.257416],[26.949528, -82.321961], [27.164774, -82.489502], [27.207529, -82.256043], [27.209972, -82.058289], [27.043636, -82.043201], ]}}]}

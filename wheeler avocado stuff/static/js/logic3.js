@@ -20,34 +20,60 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 var link = "static/data/Florida_Counties.geojson";
 
 // Function that will determine the color of a neighborhood based on the borough it belongs to
-function chooseColor(County) {
-  switch (County) {
-  case "-80.4351748787961,25.23839059819246":
-    return "yellow";
-  case "Bronx":
-    return "red";
-  case "Manhattan":
-    return "orange";
-  case "Queens":
-    return "green";
-  case "Staten Island":
-    return "purple";
-  default:
-    return "black";
+function choosecolor(COUNTYNAME) {
+  var color = "";
+
+  if (COUNTYNAME = "DADE") {
+      color = "darkred";
   }
+  else if (COUNTYNAME >= 7.0) {
+      color = "red";
+  }
+  else if (COUNTYNAME >= 6.0) {
+      color = "orange";
+  }
+  else if (COUNTYNAME >= 5.0) {
+      color = "yellow";
+  }
+  else if (COUNTYNAME >= 4.0) {
+      color = "lightgreen";
+  }
+  else {
+      color = "white";
+  }
+  return color
 }
 
 // Grabbing our GeoJSON data..
-d3.json(link, function(data) {
+//d3.json(link, function(data) {
   // Creating a geoJSON layer with the retrieved data
-  L.geoJson(data, {
-    style: function(feature) {
-      return {
-        color: "white",
-        fillColor: chooseColor(feature.properties.borough),
-        fillOpacity: 0.5,
-        weight: 1.5
-      };
-    }
-  }).addTo(map);
+  //L.geoJson(data, {
+    //style: function(feature) {
+      //return {
+        //color: "red",
+        //fillColor: chooseColor(feature.properties.COUNTYNAME),
+        //fillOpacity: 0.5,
+        //weight: 1.5
+      //};
+    //}
+  //}).addTo(map);
+//});
+var link = "static/data/Florida_Counties.geojson";
+
+// Perform a GET request to the query URL
+d3.json(link, function (data) {
+    //check data
+    console.log(data.features);
+
+    //    add geojson layer
+    L.geoJson(data.features, { onEachFeature: onEachFeature,
+        pointToLayer: function (feature, latlng) {
+            return L.circle([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], {
+                color: choosecolor(feature.properties.COUNTYNAME),
+                fillColor: choosecolor(feature.properties.COUNTYNAME),
+                fillOpacity: 0.75,
+                radius: (feature.properties.COUNTYNAME)
+            });
+        }
+    }).addTo(map);
 });

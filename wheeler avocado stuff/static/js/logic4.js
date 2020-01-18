@@ -16,24 +16,16 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 //var link = "http://data.beta.nyc//dataset/0ff93d2d-90ba-457c-9f7e-39e47bf2ac5f/resource/" +
 //"35dd04fb-81b3-479b-a074-a27a37888ce7/download/d085e2f8d0b54d4590b1e7d1f35594c1pediacitiesnycneighborhoods.geojson";
 
-// Uncomment this link local geojson for when data.beta.nyc is down
+// LINK for Florida counties geojson file
 var link = "static/data/Florida_Counties.geojson";
 
-// Function that will determine the color of a neighborhood based on the borough it belongs to
-function chooseColor(borough) {
-  switch (borough) {
-  case "Brooklyn":
-    return "yellow";
-  case "Bronx":
-    return "red";
-  case "Manhattan":
-    return "orange";
-  case "Queens":
-    return "green";
-  case "Staten Island":
-    return "purple";
-  default:
-    return "black";
+// Function that will determine the color of a county based on whether or not avocados are grown there
+function chooseColor(COUNTYNAME) {
+  switch (COUNTYNAME) {
+  case "SARASOTA":
+    return "GREEN";
+  case "DADE":
+    return "GREEN";
   }
 }
 
@@ -41,12 +33,12 @@ function chooseColor(borough) {
 d3.json(link, function(data) {
   // Creating a geoJSON layer with the retrieved data
   L.geoJson(data, {
-    // Style each feature (in this case a neighborhood)
+    // Style each feature (in this case a county)
     style: function(feature) {
       return {
         color: "white",
-        // Call the chooseColor function to decide which color to color our neighborhood (color based on borough)
-        fillColor: chooseColor(feature.properties.borough),
+        // Call the chooseColor function to decide which color to color our county (color based on county)
+        fillColor: chooseColor(feature.properties.COUNTYNAME),
         fillOpacity: 0.5,
         weight: 1.5
       };
@@ -75,7 +67,7 @@ d3.json(link, function(data) {
         }
       });
       // Giving each feature a pop-up with information pertinent to it
-      layer.bindPopup("<h1>" + feature.properties.neighborhood + "</h1> <hr> <h2>" + feature.properties.borough + "</h2>");
+      layer.bindPopup("<h1>" + feature.properties.County + "</h1> <hr> <h2>" + feature.properties.County + "</h2>");
 
     }
   }).addTo(map);
