@@ -17,7 +17,7 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 //"35dd04fb-81b3-479b-a074-a27a37888ce7/download/d085e2f8d0b54d4590b1e7d1f35594c1pediacitiesnycneighborhoods.geojson";
 
 // LINK for Florida counties geojson file
-var link = "static/data/Florida_Counties.geojson";
+var link = "static/data/Farm_Info_Florida_Counties.geojson";
 
 // Function that will determine the color of a county based on whether or not avocados are grown there
 function chooseColor(COUNTYNAME) {

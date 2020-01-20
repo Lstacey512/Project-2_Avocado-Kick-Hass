@@ -17,7 +17,7 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 "35dd04fb-81b3-479b-a074-a27a37888ce7/download/d085e2f8d0b54d4590b1e7d1f35594c1pediacitiesnycneighborhoods.geojson";
 
 // Uncomment this link local geojson for when data.beta.nyc is down
-var link = "static/data/Florida_Counties.geojson";
+var link = "static/data/Farm_Info_Florida_Counties.geojson";
 
 // Our style object
 var mapStyle = {

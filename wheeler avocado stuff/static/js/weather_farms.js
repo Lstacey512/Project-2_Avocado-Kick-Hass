@@ -1,7 +1,7 @@
 // Creating map object
 var map = L.map("map", {
   center: [27.7128, -82.0059],
-  zoom: 11
+  zoom: 7
 });
 
 // Adding tile layer
@@ -14,13 +14,36 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 
 // If data.beta.nyc is down comment out this link
 //var link = "http://data.beta.nyc//dataset/0ff93d2d-90ba-457c-9f7e-39e47bf2ac5f/resource/" +
-"35dd04fb-81b3-479b-a074-a27a37888ce7/download/d085e2f8d0b54d4590b1e7d1f35594c1pediacitiesnycneighborhoods.geojson";
+//"35dd04fb-81b3-479b-a074-a27a37888ce7/download/d085e2f8d0b54d4590b1e7d1f35594c1pediacitiesnycneighborhoods.geojson";
 
 // Uncomment this link local geojson for when data.beta.nyc is down
- var link = "static/data/Florida_Counties.geojson";
+ var link = "static/data/Farm_Info_Florida_Counties.geojson";
 
 // Grabbing our GeoJSON data..
 d3.json(link, function(data) {
   // Creating a GeoJSON layer with the retrieved data
   L.geoJson(data).addTo(map);
+});
+//function to color in the counties green if they have avocado farms;
+function chooseColor(hasAvocadoFarm) {
+  if (hasAvocadoFarm == 1) {
+    return "green";
+  } else {
+    return "white";
+  }
+
+};
+// Grabbing our GeoJSON data..
+d3.json(link, function(data) {
+  // Creating a geoJSON layer with the retrieved data
+  L.geoJson(data, {
+    style: function(feature) {
+      return {
+        color: "blue",
+        fillColor: chooseColor(feature.properties.HasAvocadoFarm),
+        fillOpacity: 0.5,
+        weight: 1.5
+      };
+    }
+  }).addTo(map);
 });
