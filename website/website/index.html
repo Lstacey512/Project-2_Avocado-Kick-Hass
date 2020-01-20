@@ -183,8 +183,8 @@
                 </div> 
                 <div class="col-2 border vertical-controler" id="pie-button-control">
                     <p class="controler-label" style="padding: 2px 0px 5px 0px;">Display Data by</p>
-                    <button class="controler-button button-dark share-button" style="height:35px;">Type/Size </button>
-                    <button class="controler-button button-dark share-button" style="height:35px;">Traditional/Organic </button>
+                    <button class="controler-button button-dark share-button" style="height:35px;" value="type">Type/Size </button>
+                    <button class="controler-button button-dark share-button" style="height:35px;" value="production">Traditional/Organic </button>
                 </div>
             </div>
         </div>
@@ -222,19 +222,18 @@
                     <div class = "horizontal-controler light">
                         <p class="controler-label">Display </br> Data By</p>
                         <div class="button-holder">
-                            <button class="controler-button button-light">Overall </button>
-                            <button class="controler-button button-light">Type/Size </button>
-                            <button class="controler-button button-light">Traditional/Organic </button>
+                            <button class="controler-button button-light price-button" value = "overall">Overall </button>
+                            <button class="controler-button button-light price-button" value = "production">Traditional/Organic </button>
                         </div>
                     </div>
-                    <div class="horizontal-controler light">
+                    <!--<div class="horizontal-controler light">
                         <p class="controler-label">Timeframe </br> (xaxis)</p>
                         <div class="button-holder">
                             <button class="controler-button button-light">Year </button>
                             <button class="controler-button button-light">Quarter/Year </button>
                             <button class="controler-button button-light">Month </button>
                         </div>
-                    </div>
+                    </div>-->
 
                 </div>
             </div>
@@ -259,12 +258,12 @@
                     <div class = "horizontal-controler dark">
                         <p class="controler-label">Display </br> Data By</p>
                         <div class="button-holder">
-                            <button class="controler-button button-dark"> Overall </button>
-                            <button class="controler-button button-dark"> Small</button>
-                            <button class="controler-button button-dark"> Large </button>
-                            <button class="controler-button button-dark"> Extra Large</button>
-                            <button class="controler-button button-dark"> Conventional </button>
-                            <button class="controler-button button-dark"> Organic </button>
+                            <button class="controler-button button-dark vol-p-button" value = "overall"> Overall </button>
+                            <button class="controler-button button-dark vol-p-button" value = "small"> Small</button>
+                            <button class="controler-button button-dark vol-p-button" value = "large"> Large </button>
+                            <button class="controler-button button-dark vol-p-button" value = "Xlarge"> Extra Large</button>
+                            <button class="controler-button button-dark vol-p-button" value = "conventional"> Conventional </button>
+                            <button class="controler-button button-dark vol-p-button" value = "organic"> Organic </button>
                         </div>
                     </div>
                 </div>
@@ -435,7 +434,8 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="text/javascript" src="static/js/config.js"></script>
     <script type="text/javascript" src="static/js/weather.js"></script>
-    <script type="text/javascript" src="static/js/chart1.js"></script>
+    <script type="text/javascript" src="static/js/volume_charts.js"></script>
+    <script type="text/javascript" src="static/js/price_charts.js"></script>
     
 
     <script>
