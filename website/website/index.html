@@ -21,6 +21,8 @@
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
     <title>Avocad-Know</title>
+
+     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 
 <!--BODY-->
@@ -115,25 +117,25 @@
             <div class="row light-green">
                 <div class="col-7">
                     <div class="chart-holder align-items-center">
-                        <div class="chart" id="Volume-over-time" style="min-width:800px;">
+                        <div class="chart" id="volume-over-time">
                             <!--VOLUMES OVER TIME PLOTLY GOES HERE!! You may need to remove background-color from chart class (css main)-->
                         </div>
                         <div class = "horizontal-controler dark">
                             <p class="controler-label">Display </br> Data By</p>
                             <div class="button-holder">
-                                <button class="controler-button button-dark">Overall </button>
-                                <button class="controler-button button-dark">Type/Size </button>
-                                <button class="controler-button button-dark">Traditional/Organic </button>
+                                <button class="controler-button button-dark volume-y-button" id= "thebutton" value="overall">Overall </button>
+                                <button class="controler-button button-dark volume-y-button" value = "size">Type/Size </button>
+                                <button class="controler-button button-dark volume-y-button" value="production">Traditional/Organic </button>
                             </div>
                         </div>
-                        <div class="horizontal-controler dark">
+                        <!--<div class="horizontal-controler dark">
                             <p class="controler-label">Timeframe </br> (xaxis)</p>
                             <div class="button-holder">
                                 <button class="controler-button button-dark">Year </button>
                                 <button class="controler-button button-dark">Quarter/Year </button>
                                 <button class="controler-button button-dark">Month </button>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                 <div class="col-5 section-text-light">
@@ -168,21 +170,21 @@
 
             <div class="row light-cream justify-content-center" style="padding: 20px 0px 20px 0px;">
                 <div class="col-2" id="pie-2015">
-                    <div style="display:block; height:200px; width:200px; background-color:cadetblue;"></div>
+                   
                 </div>
                 <div class="col-2" id="pie-2016">
-                    <div style="display:block; height:200px; width:200px; background-color:cadetblue;"></div>
+                    
                 </div>
                 <div class="col-2" id="pie-2017">
-                    <div style="display:block; height:200px; width:200px; background-color:cadetblue;"></div>
+                   
                 </div>    
                 <div class="col-2" id="pie-2018">
-                    <div style="display:block; height:200px; width:200px; background-color:cadetblue;"></div>
+                    
                 </div> 
                 <div class="col-2 border vertical-controler" id="pie-button-control">
                     <p class="controler-label" style="padding: 2px 0px 5px 0px;">Display Data by</p>
-                    <button class="controler-button button-dark" style="height:35px;">Type/Size </button>
-                    <button class="controler-button button-dark" style="height:35px;">Traditional/Organic </button>
+                    <button class="controler-button button-dark share-button" style="height:35px;">Type/Size </button>
+                    <button class="controler-button button-dark share-button" style="height:35px;">Traditional/Organic </button>
                 </div>
             </div>
         </div>
@@ -430,9 +432,11 @@
         crossorigin=""></script>
 
     <!-- API key -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="text/javascript" src="static/js/config.js"></script>
-
     <script type="text/javascript" src="static/js/weather.js"></script>
+    <script type="text/javascript" src="static/js/chart1.js"></script>
+    
 
     <script>
         // Get the current year for the copyright
