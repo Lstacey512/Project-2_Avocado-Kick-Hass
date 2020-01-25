@@ -205,7 +205,7 @@ function volumeBarChart (yData1, xData, labels, defaultY, yData2 = "na", yData3 
     else {var data = [trace1,trace2]}
     
     var layout = {
-        title: "<b>Volume of Avocados Sold over Time</b>",
+        title: "<b>Total U.S. Haas Avocado Sales Volume (2015 - 2017)</b>",
         titlefont:{
             size: 16,
             family: 'arial',
