@@ -45,6 +45,18 @@
 
 /*------OTHER STYLING-------------------*/
 
+.author-card{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px 35px 5px;
+}
+
+.about-icon{
+    width: 200px; 
+    height: auto;
+    margin: 10px 10px 15px 10px;
+}
+
 .button-holder{
     display: flex;
     justify-content: space-around;
@@ -78,6 +90,7 @@
     width: 150px;
 }
 
+
 .controler-button:hover{
     background-color: rgb(255, 254, 238);
 }
@@ -98,6 +111,26 @@
 .dataframe{
     align-self: center;
     width: 100%
+}
+
+h1{
+    font-family: 'Questrial', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    align-self: center;   
+}
+
+h2{
+    font-family: 'Questrial', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    align-self: center;
+}
+
+h3{
+    font-family: 'Questrial', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 h6{
@@ -142,15 +175,15 @@ h6{
 .section-text-light{
     color:white;
     font-family: 'Questrial', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     text-align: justify;
 }
 
 .section-text-dark{
-    color:gray;
+    color:rgb(80, 80, 80);
     font-family: 'Questrial', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     text-align: justify;
 }
@@ -197,7 +230,6 @@ tr:nth-child(even){
     align-items: center;
     align-self: center;
     height: 150px;
-    max-width: 180px;
 }
 
 /*Media adjustments*/

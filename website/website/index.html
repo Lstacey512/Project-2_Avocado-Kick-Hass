@@ -12,12 +12,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
         integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Krona+One|Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css">
 
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
         integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
         crossorigin="" />
 
+    <!--Our CSS-->
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
     <title>Avocad-Know</title>
@@ -139,13 +142,16 @@
                     </div>
                 </div>
                 <div class="col-5 section-text-light">
-                    <p class="side-text-right"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing enim eu turpis egestas pretium. Tempor nec feugiat nisl pretium fusce id. In fermentum et sollicitudin ac orci phasellus egestas. Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Suspendisse in est ante in. Sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. Tempus egestas sed risus. Quis lectus nulla at volutpat diam ut venenatis. Selerisque eleifend donec pretium vulputate sapien nec. Massa eget egestas purus et esc viverra accumsan. Sit amet dictum sit amet.
-                        Lacus luctus sit accumsan tortor posuere ac ut. 
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    <p class="side-text-right"> 
+                    </br>
+                        Originally bred in Southern California, the Hass Avocado is the most popular cultivar of avocados in the world and commands over 80% of total global share. 
+                        For 2015, the United States alone consumed a staggering 1.66 billion haas avocados— just over enough for 5 avocados per U.S. resident. But Americans wanted more: 
+                        to 2017, Hass avocado consumption increased for an annualized growth of 6.1%. 2015 to 2016 in particular showed a sizable spurt in growth (~1.5M in units). 
                     </br>
                     </br>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        ed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. Tempus egestas sed risus.
+                        For comparison on the sheer comsuption by year end in 2017: imagine a 747 Boeing airplane. Now imagine 288 of them...and fill them with avocados. 
+                        Assuming this paces maintains, we would expect just short of 3.4 billion in annual sales within the decade. Holy Guacamole!
+
                     </p>
                 </div>
             </div>
@@ -153,18 +159,23 @@
             <!--Volumes Section 2-->
             <div class="row light-cream">
                 <div class="col-12 section-text-dark">
-                    <p class="central-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Adipiscing enim eu turpis egestas pretium. Tempor nec feugiat nisl pretium fusce id. In fermentum et sollicitudin ac orci phasellus egestas. 
-                        Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Adipiscing enim eu turpis egestas pretium. Tempor nec feugiat nisl pretium fusce id. In fermentum et sollicitudin ac orci phasellus egestas. 
-                        Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. 
+                    <p class="central-text"> Majority of haas avocado sales are between small and large, with extra large only commanding a sliver of sales. 
+                        The increases in YOY sales trend with greater proportion of small avocados, suggesting that the smaller fruits are contributing the the majority of the growth; 
+                        between 2015 to 2018, small avocados grow from 48% share to 53% share. The boom in small PLUs could be with associated either 
+                        with changes in consumer consumption or in supply trends. 
+                    </br>
+                    </br>
+                        Despite the avocado's attraction as a "health halo" food, organic sales are almost insignificant as part of the total sales volume and show only marginal increases in relative share.
+                        This could be suggest perceptions that 'organic' is not a function of the health halo, especially as the fruit is encased within a shell (therefore, making it perceived as isolated from pesticides).
+                        Or it could be indicative of avocados having a broader appeal beyond a niche "health-focused" audience.          
+                        
                     </p>
                 </div>
             </div>
 
             <div class="row light-cream justify-content-center">
                 <div class="col-10 justify-content-center">
-                    <h3 class="section-text-dark" style="font-size: 16px; text-align: center;"> Volume Sales as Type/Production Share</h3>
+                    <h3 class="section-text-dark" style="font-size: 16px; text-align: center;"> Volume Share by Type or Production</h3>
                 </div>
             </div>
 
@@ -181,7 +192,7 @@
                 <div class="col-2" id="pie-2018">
                     
                 </div> 
-                <div class="col-2 border vertical-controler" id="pie-button-control">
+                <div class="col-2 vertical-controler" id="pie-button-control" style="max-width: 180px;">
                     <p class="controler-label" style="padding: 2px 0px 5px 0px;">Display Data by</p>
                     <button class="controler-button button-dark share-button" style="height:35px;" value="type">Type/Size </button>
                     <button class="controler-button button-dark share-button" style="height:35px;" value="production">Traditional/Organic </button>
@@ -206,12 +217,12 @@
                         <img src="/Resources/Creative/Assets/LargeAvocado.png" width:400px>
 
                         <p class="side-text-left section-text-dark">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing enim eu turpis egestas pretium. Tempor nec feugiat nisl pretium fusce id. In fermentum et sollicitudin ac orci phasellus egestas. Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Suspendisse in est ante in. Sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus. Tempus egestas sed risus. Quis lectus nulla at volutpat diam ut venenatis. Selerisque eleifend donec pretium vulputate sapien nec. Massa eget egestas purus et esc viverra accumsan. Sit amet dictum sit amet.
-                        Lacus luctus sit accumsan tortor posuere ac ut. 
                         </br>
-                        </br>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing enim eu turpis egestas pretium.
-                        </p>
+                        The average price of avocados is fairly stable with an annualized change of 1.3%. This is despite growing demand volumes, which aligns with typical commodity pricing controls. 
+                    </br>
+                    </br>
+                        Comparing on production methods also shows fairly stable pricing with "organic" status generally commanding only a $0.50 markup.
+                    </p>
 
                     </div>
                 </div>
@@ -240,18 +251,14 @@
 
             <!--Section 2 Pricinv by Volume-->
             <div class="row light-green">
-                <div class="col-12 section-text-light">
-                    <p class="central-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Adipiscing enim eu turpis egestas pretium. Tempor nec feugiat nisl pretium fusce id. In fermentum et sollicitudin ac orci phasellus egestas. 
-                        Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Adipiscing enim eu turpis egestas pretium. Tempor nec feugiat nisl pretium fusce id. In fermentum et sollicitudin ac orci phasellus egestas. 
-                        Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. 
+                <div class="col-12">
+                    <p class="central-text section-text-light"> The below chart breaks out both sales and average price across quarters for the three year period. The relative relationship between price and volume suggests an inverse relationship: when prices are low, volumes are high and vice versa. 
+                        This again echoes a commodity market; however, a comparison from traditional production to organic does suggest that organic has slightly less price elasticity. Because these volumes vary so drastically, yield uncertainty is most likely the largest contributing factor to price, as we doubt demand factors, cost of inputs or capital would fluctuate nearly as much.
                     </p>
                 </div>
 
                 <div class="col-12 chart-holder align-items-center">
-                    <div class="chart" id="Pricing-by-volume" style="min-width: 1200px;">
-            
+                    <div class="chart" id="Pricing-by-volume" style="min-width: 1200px;">          
                 <!--Pricing by Volume-->
                     </div>
                     
@@ -269,9 +276,28 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-12" id="Weather-events">
-                    <!--Weather map here-->
+            <div class="row light-cream">
+                <p class=" central-text section-text-dark">
+                    Domestic harvest typically occurs Q2 to Q3 (April through August); in Q3 in particular we begin to see upticks in average price and a subsequent decrease in volume. This persists through Q4, 
+                    until influx of imported avocados (primarily from Chile) once again reduce prices. We noticed that this fluctuation grows more drastic from 2015 to 2017. Therefore, we wanted to explore if destructive weather during in mid to late-harvest could have impacted yeild during these years. 
+                    We focused specifically on California and Florida, the primary producers of domestic Haas, and with counties containing major avocado operations highlighted in green.  
+                    You can drag the slider to see exccesive rain events between a certain range of time.
+                </p>
+            </div>
+
+            <div class="row light-cream justify-content-center">
+                <h3 class="section-text-dark" style="font-size: 16px; text-align: center; margin: 15px 0px 15px 0px;"> Weather Patterns that Affect Supply</h3>
+            </div>
+
+            <div class="row light-cream" style="margin-bottom: 15px;">
+                <div class="col-md-6">
+                    <div id="mapCA" style="min-height:600px;"></div>
+                </div>
+                <div class="col-md-6">
+                    <div id="mapFL"></div>
+                </div>
+
+            </div>
                 </div>
             </div>
         </div>
@@ -290,11 +316,8 @@
             <!--Section 3 Market Tables -->
             <div class="row light-green">
                 <div class="col-12 section-text-light">
-                    <p class="central-text"style="margin-bottom: 5px;""> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Adipiscing enim eu turpis egestas pretium. Tempor nec feugiat nisl pretium fusce id. In fermentum et sollicitudin ac orci phasellus egestas. 
-                        Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Adipiscing enim eu turpis egestas pretium. Tempor nec feugiat nisl pretium fusce id. In fermentum et sollicitudin ac orci phasellus egestas. 
-                        Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. 
+                    <p class="central-text"style="margin-bottom: 5px;"> The largest driver for avocado sales was population, as the variance in per-capita consumption is not enough to cause large ordinal changes between cities. 
+                        Although this was enough to move a city within a few rankings of its population set, as it was with the examples of Los Angeles and New York or Houston vs Dallas / Fort Worth. 
                     </p>
                 </div>
             </div>
@@ -432,20 +455,48 @@
                             </tbody>
                           </table>
                 </div>
+            </div>
 
             <div class="row light-green">
                 <div class="col-12 section-text-light">
-                    <p class="central-text"style="margin-bottom: 5px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Adipiscing enim eu turpis egestas pretium. Tempor nec feugiat nisl pretium fusce id. In fermentum et sollicitudin ac orci phasellus egestas. 
-                        Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Adipiscing enim eu turpis egestas pretium. Tempor nec feugiat nisl pretium fusce id. In fermentum et sollicitudin ac orci phasellus egestas. 
-                        Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. 
+                    <p class="central-text"style="margin-bottom: 0px;"> Another study commissioned by the Hass Avocado Board examines the price elasticity of retail sales at a more granular level, and it found that cities with more inelastic demands tended to be correlated with higher per-capita consumption of avocados (Ambrozek, Saitone, & Sexton, 2019). 
+                        The study also showed that most other Southern California cities were exceptions to Los Angeles and the rest of the nation, possibly suggesting that these areas were the few places in the nation that were not supply-constrained. 
                     </p>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-12" id="markets-map">
+            <div class="row light-green" style="justify-content:space-evenly;">
+                
+                <div class="col-2 vertical-controler" id="heat-control-15">
+                        <p class="controler-label" style="padding: 2px 0px 1px 0px;"><b>Heatmap | 2015</b></p>
+                        <button class="controler-button button-light heat-button" style="width:200px; height:30px;" name="2015" value = "div">Population Diversity </button>
+                        <button class="controler-button button-light heat-button" style="width:200px; height:30px;" name="2015" value = "mill">Millenial %</button>
+                        <button class="controler-button button-light heat-button" style="width:200px; height:30px;" name="2015" value = "income">Median Income</button>
+                </div>
+
+                <div class="col-2 vertical-controler" id="heat-control-15">
+                    <p class="controler-label" style="padding: 2px 0px 1px 0px;"><b>Heatmap | 2016</b></p>
+                    <button class="controler-button button-light heat-button" style="width:200px; height:30px;" name="2016" value = "div">Population Diversity </button>
+                    <button class="controler-button button-light heat-button" style="width:200px; height:30px;" name="2016" value = "mill">Millenial %</button>
+                    <button class="controler-button button-light heat-button" style="width:200px; height:30px;" name="2016" value = "income">Median Income</button>
+                </div>
+
+            <div class="col-2 vertical-controler" id="heat-control-15">
+                <p class="controler-label" style="padding: 2px 0px 1px 0px;"><b>Heatmap | 2017</b></p>
+                <button class="controler-button button-light heat-button" style="width:200px; height:30px;" name="2017" value = "div">Population Diversity </button>
+                <button class="controler-button button-light heat-button" style="width:200px; height:30px;" name="2017" value = "mill">Millenial %</button>
+                <button class="controler-button button-light heat-button" style="width:200px; height:30px;" name="2017" value = "income">Median Income</button>
+            </div>
+                
+                
+            </div>
+
+                
+            <div class="row light-green">
+                <div class="col-12">
+                    <div id="MarketMap" style="width:100%; height: 500px;">
+                        <!--- Market Map Here-->
+                    </div>
                 </div>
             </div>
 
@@ -453,7 +504,7 @@
     </section>
 
     <!-- SECTION 4 -->
-    <section id="authors" class="my-5 text-center">
+    <section id="authors" class="my text-center">
         <div class="container-fluid">
             <!--About header-->
             <div class="row">
@@ -462,81 +513,77 @@
                 </div>
             </div>
 
-            <div class="row justify-content-center">
-                <div class="col-lg-2 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="static/images/smile.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
-                            <h3>Leeann</h3>
-                            <h5 class="text-muted">Data Analyst</h5>
-                            <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore fugit qui dignissimos idipsa eius. -->
-                            <!-- </p> -->
+            <div class="row tan">
+                <div class="col-md-4">
+                    <img src="../../Resources/Creative/Assets/AvoButtonLogo.png" class="about-icon">
+                </div>
+                <div class="col-md-8">
+                    <p class="side-text-right section-text-dark" style="margin-top: 15px;">This website was developed as Project #2 for a Data Analyis & Visualization bootcamp.
+                    Inspiration for this projects came from a dataset sourced from the the Haas Avocado Board and published on Kaggle.com. Supplemental data for analysis was sourced from Aeris Weather API (weather) and US Census API (heat maps).
+                    Avocado and census data was processed using Python Pandas library and added to a <a href= "../../Resources/Data/Data tables for SQL/DB Schema Architecture.png" target="_blank">Postgres SQL database</a>. Visualizations were created using D3, Plotly and Leaflet libraries. 
+                    Spyscroll and JQuery were also used as additional libraries for website and map functionalities. This website is technically still in development (we have plans to further update the maps to improve functionaly and readibility, as well as refine mobile compatibility), so visit again soon for more! </p>
+                </div>
+            </div>
 
-                        </div>
+            <div class="row justify-content-center tan">
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="author-card align-items-center">
+                        <h1> Jason B.</h1>
+                        <h2> Data wrangling and processing, web development & map interactions </h2>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="static/images/smile.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
-                            <h3>Will</h3>
-                            <h5 class="text-muted">Data Analyst</h5>
-                        </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="author-card align-items-center">
+                        <h1> Jeff W.</h1>
+                        <h2> Data wrangling, data analysis and map interactions </h2>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="static/images/smile.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
-                            <h3>Seble</h3>
-                            <h5 class="text-muted">Data Analyst</h5>
-                        </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="author-card align-items-center">
+                        <h1> Leanne S.</h1>
+                        <h2> Data architecture, web design & development and map interactions </h2>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="static/images/smile.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
-                            <h3>Jeff</h3>
-                            <h5 class="text-muted">Data Analyst</h5>
-                        </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="author-card align-items-center">
+                        <h1> Seble S.</h1>
+                        <h2> Data analysis and web development </h2>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="author-card align-items-center">
+                        <h1> William D.</h1>
+                        <h2> Data wrangling/processing and data analysis </h2>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="static/images/smile.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
-                            <h3>Jason</h3>
-                            <h5 class="text-muted">Data Analyst</h5>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
 
 
         <!-- ACCORDION -->
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col">
+        <div class="container-fluid">
+            <div class="row tan justify-content-center">
+                <div class="col-8">
                     <div id="accordion">
                         <div class="card">
                             <div class="card-header">
                                 <h5 class="mb-0">
                                     <div href="#refCollapse" data-toggle="collapse" data-parent="#accordion">
-                                        <i class="fas fa-arrow-circle-down"></i> References
+                                        <i class="fas fa-arrow-circle-down"></i> Resources 
                                     </div>
                                 </h5>
                             </div>
 
                             <div id="refCollapse" class="collapse">
                                 <div class="card-body">
-                                    <p>www.Kaggle.com</p>
+                                    <p><strong>Avocado Dataset:</strong> https://www.kaggle.com/neuromusic/avocado-prices</p>
+                                    <p><strong> Aeris Weather API:</strong> https://www.aerisweather.com/support/docs/api/</p>
+                                    <p><strong>Additional Referenced Research: </strong> Ambrozek, C., Saitone, T. L., & Sexton, R. J. (2019). Price Elasticities of Demand for Fresh Hass Avocados in the United States: Concepts, Estimation, and Applications. Hass Avocado Board. Retrieved from https://hassavocadoboard.com/wp-content/uploads/2019/04/Hass-Avocado-Board-Price-Elasticities-of-Demand-or-Fresh-Hass-Avocados-2019.pdf </p>
                                 </div>
                             </div>
                         </div>
@@ -568,18 +615,25 @@
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
 
-    <!-- Leaflet JavaScript -->
+    <!-- Libraries JavaScript -->
     <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
         integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
         crossorigin=""></script>
-
-    <!-- API key -->
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+    <!--Map key-->
     <script type="text/javascript" src="static/js/config.js"></script>
-    <script type="text/javascript" src="static/js/weather.js"></script>
+    
+    <!--<script type="text/javascript" src="static/js/weather.js"></script>-->
     <script type="text/javascript" src="static/js/volume_charts.js"></script>
     <script type="text/javascript" src="static/js/price_charts.js"></script>
     <script type="text/javascript" src="static/js/leaflet-heat.js"></script>
+    <script type="text/javascript" src="static/js/MarketsMap.js"></script>
+    <script src="static/js/SliderControl.js"></script>
+    <script src="static/js/California-Map.js"></script>
+    <script src="static/js/Florida-Map.js"></script>
     
 
     <script>
@@ -614,6 +668,7 @@
 
 
     </script>
+
 </body>
 
 </html>

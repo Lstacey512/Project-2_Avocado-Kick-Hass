@@ -70,3 +70,13 @@
     height: 750px;
     /* width: 100%;  */
 }
+
+#mapFL { 
+    min-width: 500px; 
+    min-height: 600px; 
+}
+​
+#mapCA { 
+    min-width: 500px; 
+    min-height: 600px; 
+}
