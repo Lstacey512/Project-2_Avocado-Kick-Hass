@@ -1,3 +1,4 @@
+
 //-------------Creates aggregate data across the two csv's
 /**
  * Mutates and returns MarketInfo
